@@ -30,6 +30,14 @@ pre {
 	background:#faf8f0;
 }
 
+.exam {
+  color:red;
+}
+
+.project {
+  .color:green;
+}
+
 #content #pre-stylish code {
 	display:block;
 	padding:.5em 1em;
