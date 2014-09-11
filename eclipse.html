@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Using Eclipse</title>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro'
+    rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+    <div id="container">
+
+        <h2>Using Eclipse (Outside of Class)</h2>
+
+        <p>There are two places you might want to use Eclipse
+            outside of class: on a machine you control, and on a College
+            computer. In the first case, you can just install Eclipse
+            (as explained below), and it should work easily.</p>
+
+        <p>In the second case (College labs), here's what I've been
+            advised: in order to maximize your flexibility (i.e. to be
+            able to work at any lab computer), you should install
+            Eclipse on a USB drive, and run it from there. This has
+            worked for simple programs; I'm relying on you to tell me if
+            you have any problems.</p>
+
+        <h3>Installing Eclipse</h3>
+
+        <p></p>
+        Installing Eclipse is fairly straightforward: download and
+        unzip; put it wherever you want (hard drive, USB drive, etc). If
+        you have trouble with the unzip, try installing <a
+            href="http://www.7-zip.org/">7zip</a>.
+        </p>
+
+        <p>
+            I strongly recommend installing the Eclipse version called
+            "Eclipse IDE for Java EE Developers"&mdash;the Windows
+            version is <a
+                href="http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/R/eclipse-jee-luna-R-win32-x86_64.zip">here</a>.
+            Once you've installed that, you need one more plugin. Under
+            the "Help" menu, select "Install New Software...". On the
+            window that pops up, click the "Add.." button and enter the
+            URL
+            <code>http://download.eclipse.org/egit/github/updates</code>
+            . Once that's done, in the area labeled "type filter here",
+            type
+            <code>github</code>
+            , and in the area below, you should see a single item,
+            <code>Eclipse GitHub integration with task focused
+                interface</code>
+            . Select that item's checkbox, then click "Next" and do
+            whatever is necessary to complete the install. Eclipse is
+            ready to go.
+        </p>
+
+        <h3>Other Items for your USB Drive</h3>
+
+        <p>
+            If you're using Eclipse on USB, you should make sure that
+            your Eclipse workspace is <em>also</em> on your USB drive.
+            Once you select a place for it, you can tell Eclipse to make
+            that your default workspace, so it will stop asking you each
+            time you start.
+        </p>
+
+        <p>
+            Finally, you may want to be sure that Java 7 is available to
+            you&mdash;it's hard to predict what will be on the College
+            machines. (You may not <em>need</em> to do this; if you
+            don't have any trouble without this step, you can skip it.)
+            To do this, download the Java 7 JDK (currently at
+            <code>http://download.oracle.com/otn-pub/java/java_ee_sdk/7u3/java_ee_sdk-7u1.zip</code>
+            ). When you run the installer, make sure it installs <em>on
+                your USB drive</em>. Record the folder name (probably
+            something like
+            <code>e:\java\jdk1.7.3\</code>
+            ).
+        </p>
+        <p>
+            One last step: you need to be able to tell the operating
+            system where to find this version of Java, so you'll write a
+            very short script. Using Notepad, create a file in the root
+            directory of your USB drive called something like
+            <code>javaUSB.bat</code>
+            (the name doesn't really matter, but it needs to end in
+            <code>.bat</code>
+            ). In that file, type one line:
+        </p>
+
+
+        <code>set Path=java\jdk1.7.3\bin;%Path% </code>
+
+        <p>Note: don't use a drive letter, but otherwise make sure
+            the path matches the name of the folder where you installed
+            Java.</p>
+
+        <p>In order to run Eclipse, and make sure that you have the
+            right version of Java, open a command window and issue three
+            commands:</p>
+
+        <code>E: <br />javaUSB 
+        <br />
+        eclipse\eclipse.exe<br /></code>
+
+        <p>Again, the drive letter and particular paths may vary
+            depending on how you've set up your USB drive.</p>
+
+
+
+    </div>
+</body>
+</html>
